@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis FE Challenge</title>
+</head>
+
+<!-- Start Body -->
+
+<body>
+  <!-- Start Content -->
+  <div class="content">
+    <!-- Start Title -->
+    <div class="title">
+      <h1>Analysis chart</h1>
+      <br />
+      <h3>Number of lessons</h3>
+    </div>
+    <!-- End Title -->
+
+    <br />
+
+    <!-- Start Filters -->
+    <div class="filters">
+      <!-- Start Form -->
+      <form class="form-group">
+        <!-- Start Row -->
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-md-4">
+            <label>Select Country &nbsp;</label>
+            <select class="form-control w-75 d-inline">
+              <option *ngFor="let coun of allCountries" value="{{ coun }}">
+                {{ coun }}
+              </option>
+            </select>
+          </div>
+          <!-- End Col -->
+
+          <!-- Start Col -->
+          <div class="col-md-4">
+            <label>Select Camp &nbsp;</label>
+            <select class="form-control w-75 d-inline">
+              <option *ngFor="let camp of allCamps" value="{{ camp }}">
+                {{ camp }}
+              </option>
+            </select>
+          </div>
+          <!-- End Col -->
+
+          <!-- Start Col -->
+          <div class="col-md-4">
+            <label>Select School &nbsp;</label>
+            <select class="form-control w-75 d-inline">
+              <option value="all">Show All</option>
+              <option *ngFor="let school of allSchools" value="{{ school }}">
+                {{ school }}
+              </option>
+            </select>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </form>
+      <!-- End Form -->
+    </div>
+    <!-- End Filters -->
+
+    <!-- Start Chart Div -->
+    <div id="divChart">
+      <div class="row">
+        <div class="col-md-8">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div class="col-md-1">
+          <div class="line"></div>
+        </div>
+        <div class="co-md-3">
+          <div class="all-lessons">
+            <h2>{{ allLessons }} lessons</h2>
+            <h6>in {{ currCamp }}</h6>
+          </div>
+          <br>
+          <div class="all-schools">
+            <div class="school" *ngFor="let data of finalData">
+              <div *ngFor="let d of data">
+                <div class="row">
+                  <div class="col-md-2">
+                    <i class="fa-solid fa-circle-dot mt-2"></i>
+                  </div>
+                  <div class="col-md-10">
+                    <h4 class="test">{{ d.lessons }} lessons</h4>
+                    <h6>in {{ d.school }}</h6>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Chart Div -->
+  </div>
+  <!-- End Content -->
+</body>
+<!-- End Body -->
+
+</html>
