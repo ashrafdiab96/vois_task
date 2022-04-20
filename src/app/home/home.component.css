@@ -1,51 +1,61 @@
 /* General */
+
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Kanit:wght@300&family=Roboto+Mono&family=Roboto:wght@300&display=swap");
+html,
 body {
-  background-color: #f5f6fa;
-  font-family: "Akshar", sans-serif;
+  height: 100%;
+}
+
+body {
+    /* dark */
+    background-color: #f5f6fa;
+    /* background-color: #1c233d; */
+    font-family: "Akshar", sans-serif;
 }
 
 /* Home page content */
 
 .content {
-  width: 95%;
-  margin: auto;
-  padding: 20px;
+    width: 95%;
+    margin: auto;
+    padding: 20px;
 }
+
 
 /* Home page titles */
 
 .content .title * {
-  color: #b8a0cc;
+    color: #b8a0cc;
 }
 
 .content .filters label {
-  color: #9b9b9b;
-  font-weight: 600;
+    color: #9b9b9b;
+    font-weight: 600;
 }
 
 .content .filters select {
-  background-color: #8dd0fa;
-  border: 2px solid #88c6e8;
+    background-color: #8dd0fa;
+    border: 2px solid #88c6e8;
 }
 
 .content #divChart {
-  background-color: #fff;
-  padding: 20px;
+    /* dark */
+    background-color: #fff;
+    /* background-color: #2d2b3cab; */
+    padding: 20px;
 }
 
 .content #divChart .line {
-  height: 100%;
-  width: 2px;
-  background-color: #ccc;
+    height: 100%;
+    width: 2px;
+    background-color: #ccc;
 }
 
 .content #divChart .all-lessons * {
-  color: #bcbbbb;
+    color: #bcbbbb;
 }
 
 .content #divChart .all-schools .school .row .col-md-10 *,
 .content #divChart .all-schools .school .row .col-md-2 * {
-  color: #d7beea;
+    color: #d7beea;
 }
-
